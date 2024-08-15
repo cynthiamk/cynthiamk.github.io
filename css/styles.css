@@ -142,7 +142,9 @@ padding-left: 10%;;
     text-align: center;
 }
 
-#profile {
+
+
+#portfolio {
     background-image: url(/images/bg.png);
     position:relative;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -150,7 +152,7 @@ padding-left: 10%;;
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     }
 
-#profile > .container  {
+#portfolio > .container  {
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -158,7 +160,7 @@ padding-left: 10%;;
    
 }
 
-#profile header  {
+#portfolio header  {
 margin-bottom: 5em;
 text-align: center;
 }
