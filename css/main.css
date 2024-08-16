@@ -1,0 +1,145 @@
+
+p, a, .card, ul {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: medium;
+    text-decoration: none;
+}
+
+
+h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+
+#navigation .container-fluid {
+    background-color: #002333;
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    color: #fff;
+}
+
+.nav a:hover{
+    color: #B4BEC9;
+}
+
+/******* home section ******/
+
+#home > .container-fluid {
+
+    background-color: #B4BEC9;
+    background: url(/images/cyborg.png) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: 80vh;
+    z-index: 100;
+    color: #fff;
+}
+
+#home h1 {
+    color: #fff;
+    font-family: Matemasie;
+    }
+
+#home .row {
+    align-items: center;
+
+}
+
+.home-btn {
+    --bs-btn-padding-y: 1em;
+    --bs-btn-padding-x: 9rem;
+    /* --bs-btn-font-size: .85rem; */
+    background-color: #159A9C;
+    border-color: #159A9C;
+}
+
+.home-btn a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.home-btn:hover {
+    background-color: #159A9C;
+    border-color: #159A9C;
+    opacity: 0.9;
+}
+
+.home-btn a:hover {
+   
+    color: #B4BEC9;
+}
+
+
+@media (max-width: 700px){
+    .home-btn {
+        --bs-btn-padding-y: 1em;
+        --bs-btn-padding-x: 2rem;
+    }
+
+}
+
+@media (min-width: 180px) and (max-width: 402px){
+    .nav a {
+        font-size: small;
+        
+    }
+
+    #home p {
+        font-size: small;
+        text-decoration: none;
+    }
+    .home-btn a {
+      
+        font-size: .8rem;
+       
+    }
+    
+    }
+
+#interests > .container-fluid {
+
+    background-color: #159A9C;
+    
+    padding: 0;
+    margin: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+#portfolio > .container-fluid {
+
+    background-color: #B4BEC9;
+    
+    padding: 0;
+    margin: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+#contact > .container-fluid {
+
+    background-color: #002333;
+    
+    padding: 0;
+    margin: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
