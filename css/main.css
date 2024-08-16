@@ -8,6 +8,7 @@ p, a, .card, ul {
     font-weight: 300;
     font-size: medium;
     text-decoration: none;
+    
 }
 
 
@@ -52,11 +53,15 @@ h1, h2 {
 #home h1 {
     color: #fff;
     font-family: Matemasie;
-    margin-left: 3rem;
+    margin-left: 4rem;
+    margin-top: 3rem;
     }
 
 #home p {
-    margin-left: 3rem;
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 #home .row {
@@ -66,11 +71,11 @@ h1, h2 {
 
 .home-btn {
     --bs-btn-padding-y: 1em;
-    --bs-btn-padding-x: 9rem;
+    --bs-btn-padding-x: 8rem;
     /* --bs-btn-font-size: .85rem; */
     background-color: #159A9C;
     border-color: #159A9C;
-    margin-left: 3rem;
+     margin-left: 0; 
 }
 
 .home-btn a {
@@ -100,27 +105,40 @@ h1, h2 {
 .home-btn a {
     font-size: 1rem;
 }
-   
-#interests > .container {
+   /****** interests ******/
+#interests > .container{
 
     background-color: #159A9C;
-    height: 100vh;
-    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    justify-content: space-around;
+    
 }
 
 #interests .card {
     background-color: #B4BEC9;
-    opacity: 0.9;
+    opacity: 0.8;
     color: #002333;
     height: 20rem;
-    align-items: center;
+    left: 0;
+    right:0;
+    
 }
 
 #interests .card .fa-solid {
 
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
     color: #159A9C;
+}
+
+#interests .card h2 {
+    color: #002333;
+    
+}
+
+#interests .card ul {
+    color: #002333;
 }
 
 .content-btn {
@@ -129,7 +147,8 @@ h1, h2 {
     /* --bs-btn-font-size: .85rem; */
     background-color: #002333;
     border-color: #002333;
-    /* margin-left: 3rem; */
+    margin-top: 3rem; 
+    margin-bottom: 3rem;
 }
 
 .content-btn a {
@@ -190,10 +209,15 @@ h1, h2 {
         --bs-btn-padding-x: 2rem;
     }
 
+    .home .col-lg-6 {
+        align-items: center;
+    }
+
     .content-btn {
         
             --bs-btn-padding-y: 1em;
-            --bs-btn-padding-x: 1em;    
+            --bs-btn-padding-x: 1em;  
+            
     }
 
 }
@@ -208,6 +232,27 @@ h1, h2 {
         text-decoration: none;
         color: #fff;
         
+    }
+
+    #home h1 {
+        color: #fff;
+        font-family: Matemasie;
+        margin-left: 0;
+        }
+    
+    #home p {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    #home .row {
+        align-items: center;
+    
+    }
+
+    #interests .card {
+       
+        height: fit-content;
     }
 }
 
