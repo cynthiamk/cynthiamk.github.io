@@ -20,6 +20,7 @@ h1, h2 {
     background-color: #002333;
     display: flex;
     justify-content: center;
+    width: 100vw;
 }
 
 .nav a {
@@ -35,7 +36,7 @@ h1, h2 {
 #home > .container-fluid {
 
     background-color: #B4BEC9;
-    background: url(/images/cyborg.png) no-repeat center center; 
+    background: url(/images/cyborg.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -43,9 +44,8 @@ h1, h2 {
     overflow: hidden;
     padding: 0;
     margin: 0;
-    width: auto;
+    width: 100vw;
     height: 80vh;
-    z-index: 100;
     color: #fff;
 }
 
@@ -129,7 +129,7 @@ h1, h2 {
     /* --bs-btn-font-size: .85rem; */
     background-color: #002333;
     border-color: #002333;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
 }
 
 .content-btn a {
@@ -169,7 +169,7 @@ h1, h2 {
     padding: 0;
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     z-index: 100;
 }
 
@@ -188,6 +188,12 @@ h1, h2 {
     .home-btn {
         --bs-btn-padding-y: 1em;
         --bs-btn-padding-x: 2rem;
+    }
+
+    .content-btn {
+        
+            --bs-btn-padding-y: 1em;
+            --bs-btn-padding-x: 1em;    
     }
 
 }
