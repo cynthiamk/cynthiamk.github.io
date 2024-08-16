@@ -1,4 +1,8 @@
 
+body{
+    background-color: #159A9C;
+}
+
 p, a, .card, ul {
     font-family: "Inter", sans-serif;
     font-weight: 300;
@@ -7,7 +11,7 @@ p, a, .card, ul {
 }
 
 
-h1 {
+h1, h2 {
     font-family: "Bricolage Grotesque", sans-serif;
 }
 
@@ -48,7 +52,12 @@ h1 {
 #home h1 {
     color: #fff;
     font-family: Matemasie;
+    margin-left: 3rem;
     }
+
+#home p {
+    margin-left: 3rem;
+}
 
 #home .row {
     align-items: center;
@@ -61,6 +70,7 @@ h1 {
     /* --bs-btn-font-size: .85rem; */
     background-color: #159A9C;
     border-color: #159A9C;
+    margin-left: 3rem;
 }
 
 .home-btn a {
@@ -80,6 +90,62 @@ h1 {
     color: #B4BEC9;
 }
 
+    /* #home .transparent-box {
+        background-color: #B4BEC9;
+        opacity: 0.2;
+        z-index: 1000;
+
+    } */
+   
+.home-btn a {
+    font-size: 1rem;
+}
+   
+#interests > .container {
+
+    background-color: #159A9C;
+    height: 100vh;
+    justify-content: center;
+}
+
+#interests .card {
+    background-color: #B4BEC9;
+    opacity: 0.9;
+    color: #002333;
+    height: 20rem;
+    align-items: center;
+}
+
+#interests .card .fa-solid {
+
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #159A9C;
+}
+    
+
+/* portfolio */
+
+#portfolio > .container-fluid {
+
+    background-color: #B4BEC9;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+#contact > .container-fluid {
+
+    background-color: #002333;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
 
 @media (max-width: 700px){
     .home-btn {
@@ -92,54 +158,16 @@ h1 {
 @media (min-width: 180px) and (max-width: 402px){
     .nav a {
         font-size: small;
-        
     }
 
     #home p {
-        font-size: small;
+        font-size: medium;
         text-decoration: none;
+        color: #fff;
+        
     }
-    .home-btn a {
-      
-        font-size: .8rem;
-       
-    }
-    
-    }
-
-#interests > .container-fluid {
-
-    background-color: #159A9C;
-    
-    padding: 0;
-    margin: 0;
-    
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
 }
 
-#portfolio > .container-fluid {
 
-    background-color: #B4BEC9;
-    
-    padding: 0;
-    margin: 0;
-    
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-}
 
-#contact > .container-fluid {
-
-    background-color: #002333;
-    
-    padding: 0;
-    margin: 0;
-    
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-}
 
