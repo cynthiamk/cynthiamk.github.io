@@ -122,6 +122,43 @@ h1, h2 {
     margin-bottom: 1.5rem;
     color: #159A9C;
 }
+
+.content-btn {
+    --bs-btn-padding-y: 1em;
+    --bs-btn-padding-x: 9rem;
+    /* --bs-btn-font-size: .85rem; */
+    background-color: #002333;
+    border-color: #002333;
+    margin-left: 3rem;
+}
+
+.content-btn a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.content-btn:hover {
+    background-color: #002333;
+    border-color: #002333;
+    opacity: 0.8;
+}
+
+.content-btn a:hover {
+   
+    color: #B4BEC9;
+}
+
+    /* #home .transparent-box {
+        background-color: #B4BEC9;
+        opacity: 0.2;
+        z-index: 1000;
+
+    } */
+   
+.content-btn a {
+    font-size: 1rem;
+}
     
 
 /* portfolio */
