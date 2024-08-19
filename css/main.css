@@ -1,9 +1,10 @@
 
 body{
     background-color: #159A9C;
+    
 }
 
-p, a, .card, ul {
+p, a, .card, ul label, input, .btn, button{
     font-family: "Inter", sans-serif;
     font-weight: 300;
     font-size: medium;
@@ -14,6 +15,7 @@ p, a, .card, ul {
 
 h1, h2 {
     font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 400;
 }
 
 
@@ -34,7 +36,7 @@ h1, h2 {
 
 /******* home section ******/
 
-#home > .container-fluid {
+#home  {
 
     background-color: #B4BEC9;
     background: url(/images/cyborg.png) no-repeat center center fixed; 
@@ -43,17 +45,17 @@ h1, h2 {
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
-    padding: 0;
-    margin: 0;
+    padding-top: 10em;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     color: #fff;
+    
 }
 
 #home h1 {
     color: #fff;
     font-family: Matemasie;
-    margin-left: 4rem;
+    margin-left: 3.5rem;
     margin-top: 3rem;
     }
 
@@ -62,6 +64,8 @@ h1, h2 {
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    font-weight: 400;
+    font-size: larger;
 }
 
 #home .row {
@@ -78,7 +82,7 @@ h1, h2 {
      margin-left: 0; 
 }
 
-.home-btn a {
+.home-btn {
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
@@ -88,11 +92,13 @@ h1, h2 {
     background-color: #159A9C;
     border-color: #159A9C;
     opacity: 0.9;
+    color: #fff;
 }
 
-.home-btn a:hover {
-   
-    color: #B4BEC9;
+.home-btn:active:focus {
+    background-color: #159A9C;
+    border-color: #159A9C;
+    opacity: 0.9;
 }
 
     /* #home .transparent-box {
@@ -102,13 +108,16 @@ h1, h2 {
 
     } */
    
-.home-btn a {
-    font-size: 1rem;
-}
+
    /****** interests ******/
+
+#interests {
+    background-color: #159A9C;
+} 
+
 #interests > .container{
 
-    background-color: #159A9C;
+    
     height: fit-content;
     width: fit-content;
     justify-content: space-around;
@@ -141,7 +150,7 @@ h1, h2 {
     color: #002333;
 }
 
-.content-btn {
+.interests-btn {
     --bs-btn-padding-y: 1em;
     --bs-btn-padding-x: 9rem;
     /* --bs-btn-font-size: .85rem; */
@@ -151,19 +160,26 @@ h1, h2 {
     margin-bottom: 3rem;
 }
 
-.content-btn a {
+.interests-btn{
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
 }
 
-.content-btn:hover {
+.interests-btn:hover {
     background-color: #002333;
     border-color: #002333;
-    opacity: 0.8;
+    color: #fff;
+    opacity: 0.9;
 }
 
-.content-btn a:hover {
+.interests-btn:active:focus {
+    background-color: #002333;
+    border-color: #002333;
+    color: #fff;
+}
+
+.interests-btn:hover {
    
     color: #B4BEC9;
 }
@@ -174,17 +190,13 @@ h1, h2 {
         z-index: 1000;
 
     } */
-   
-.content-btn a {
-    font-size: 1rem;
-}
-    
+       
 
 /* portfolio */
 
 #portfolio > .container-fluid {
 
-    background-color: #B4BEC9;
+    background-color: #fff;
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -193,32 +205,181 @@ h1, h2 {
 }
 
 #contact > .container-fluid {
+    display: flex;
+    background-color: #002333;
+    color: #999;
+    z-index: 100;
+    justify-content: center;
+    text-shadow: -1px -1px 0px #181818;
+}
+
+#contact {
 
     background-color: #002333;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
+    color: #fff;
+}
+
+#contact .container .row {
+    align-items: center;
+
+}
+
+#contact form textarea {
+    
+    height: 15em;
+    background-color: #002333;
+    line-height: 1.85em;
+	color: #B4BEC9;
+	font-weight: 300;
+	font-size: 13pt;
+    border: solid 1px #159A9C;
+}
+
+#contact form input {
+    color: #B4BEC9;
+	font-weight: 300;
+	font-size: 13pt;
+}
+
+form label {
+    color: #B4BEC9;
+    font-weight: 700;
+    display: block;
+    margin: 0 0 0.5em 0;
+}
+
+form input[type=text],
+form input[type=email],
+form select,
+form textarea {
+    -moz-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
+    transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
+    -webkit-appearance: none;
+    display: block;
+    border: 0;
+    padding: 0.75em;
+    font-size: 1em;
+    border-radius: 8px;
+    border: solid 1px #159A9C;
+    background: #002333;
+    color: #B4BEC9;
+    box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025);
+    width: 100%;
+}
+
+    form input[type=text]:focus,
+    form input[type=email]:focus,
+    form select:focus,
+    form textarea:focus {
+        background: #002333;
+        box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #159A9C
+    }
+
+form textarea {
+    height: 15em;
+    font-family: "Inter", sans-serif;
+}
+
+#contact .msg-btn {
+     --bs-btn-padding-y: 1em;
+    --bs-btn-padding-x: 5rem; 
+    /* --bs-btn-font-size: .85rem; */
+    background-color: #159A9C;
+    border-color: #159A9C;
+     margin-left: 0; 
+     text-align: center;
+}
+
+.msg-btn {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.msg-btn:hover {
+    background-color: #159A9C;
+    border-color: #159A9C;
+    opacity: 0.9;
+    color: #fff;
+}
+
+.msg-btn:active:focus {
+    background-color: #159A9C;
+    border-color: #159A9C;
+    opacity: 0.9;
+}
+
+#contact footer ul {
+    color: #fff;
+}
+
+#contact > .find-me {
+    font-weight: 600;
+    font-size: large;
+}
+
+#contact ul i{
+    font-size: 2.5em;
+    padding: 0 .3em;
+    
+}
+
+#contact footer {
+    font-size: medium;
+    color: #fff;
+}
+
+#contact .border-top {
+    border-color: #159A9C;
 }
 
 
+
+form ::-webkit-input-placeholder {
+    color: #B4BEC9 !important;
+}
+
+form :-moz-placeholder {
+    color: #B4BEC9 !important;
+}
+
+form ::-moz-placeholder {
+    color: #B4BEC9 !important;
+}
+
+form :-ms-input-placeholder {
+    color: #B4BEC9 !important;
+}
+
+form ::-moz-focus-inner {
+    border: 0;
+}
+
+
+
+
 @media (max-width: 700px){
+  
     .home-btn {
         --bs-btn-padding-y: 1em;
         --bs-btn-padding-x: 2rem;
+        
     }
 
     .home .col-lg-6 {
         align-items: center;
     }
 
-    .content-btn {
+    .interests-btn  {
         
             --bs-btn-padding-y: 1em;
             --bs-btn-padding-x: 1em;  
             
     }
+    
 
 }
 
@@ -253,6 +414,10 @@ h1, h2 {
     #interests .card {
        
         height: fit-content;
+    }
+
+    #contact footer span {
+       text-align: center;
     }
 }
 
