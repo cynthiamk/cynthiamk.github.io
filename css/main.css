@@ -55,8 +55,8 @@ h1, h2 {
 #home h1 {
     color: #fff;
     font-family: Matemasie;
-    margin-left: 3.5rem;
-    margin-top: 3rem;
+    /* margin-left: 3.5rem; */
+    /* margin-top: 1rem; */
     }
 
 #home p {
@@ -67,6 +67,8 @@ h1, h2 {
     font-weight: 400;
     font-size: larger;
 }
+
+
 
 #home .row {
     align-items: center;
@@ -101,6 +103,11 @@ h1, h2 {
     opacity: 0.9;
 }
 
+#home p::selection {
+    color:#002333;
+    background-color: #B4BEC9;
+}
+
     /* #home .transparent-box {
         background-color: #B4BEC9;
         opacity: 0.2;
@@ -122,6 +129,11 @@ h1, h2 {
     width: fit-content;
     justify-content: space-around;
     
+}
+
+#interests p::selection {
+    color:#002333;
+    background-color: #B4BEC9;
 }
 
 #interests .card {
@@ -334,6 +346,14 @@ form textarea {
 
 #contact .border-top {
     border-color: #159A9C;
+}
+
+#contact p::selection, h2::selection {
+    background-color: #159A9C;
+}
+
+#contact footer span::selection {
+    background-color: #159A9C;
 }
 
 
