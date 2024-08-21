@@ -1,61 +1,38 @@
- import { public_key } from "./config.js";
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
 
-(function() {
-    // https://dashboard.emailjs.com/admin/account
-    emailjs.init({
-      publicKey: public_key,
-      template_id: 'template_exf5zr4'
-    });
-})();
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
 
-window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // these IDs from the previous steps
-        
-        emailjs.sendForm('service_aoe529e', 'contact_form', this)
-            .then(() => {
-                console.log('SUCCESS!');
-            }, (error) => {
-                console.log('FAILED...', error);
-            });
-    });
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
-emailjs.send("service_aoe529e","template_exf5zr4",{
-    to_name: "cynthia",
-    from_name: "Lubasi",
-    message: "Testing",
-    reply_to: "muyundacynthia@gmail.com",
-    });
+function sendEmail() {
+    var link = document.getElementById('send_email');
+    var name = document.getElementById('floatingName').value;
+    var subject = document.getElementById('floatingSubject').value;
+    var message = "Hello my name is " + name + " -- " + document.getElementById('floatingMessage').value;
+    var email = "cynmuy@gmail.com";
+    var href = "mailto:" + email + "?subject=" + subject + "&body=" + message;
+    console.log(href);
+    link.setAttribute("href", href);
+  }
 
-// $(document).ready(function () {
-//     $('#contact-form').submit(function (e) {
-//     const form = document.querySelector('form[id="contact-form"]');
-//     const username = form.elements['user_name'].value;
-//     const userMail = form.elements['user_email'].value;
-//     const subject = form.elements['subject'].value;
-//     const message = "email — " + userMail + '<br>' + "Summary:" + form.elements['message'].value;
-//     e.preventDefault();
-//     var data = {
-//     service_id: 'service_aoe529e',
-//     template_id: 'template_exf5zr4',
-//     public_key: public_key,
-//     template_params: {
-//     from_name: username,
-//     to_name: 'Cynthia',
-//     subject: subject,
-//     message_html: message
-//     }
-//     };
-//     $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-//     type: 'POST',
-//     data: JSON.stringify(data),
-//     contentType: 'application/json'
-//     }).done(function() {
-//     alert('Your mail is sent!');
-//     }).fail(function(error) {
-//     alert('Oops… ' + JSON.stringify(error));
-//     })
-//     })
-//     })
+

@@ -1,8 +1,19 @@
 
 body{
     background-color: #159A9C;
+   
     
 }
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: .1em;
+    display: none;
+    font-size: 1.5rem;
+    color: #FFC636;
+    z-index: 1000;
+  }
+
 
 p, a, .card, ul label, input, .btn, button{
     font-family: "Inter", sans-serif;
@@ -19,11 +30,13 @@ h1, h2 {
 }
 
 
-#navigation .container-fluid {
+#navigation {
     background-color: #002333;
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
+    /* overflow: hidden; */
+    
 }
 
 .nav a {
@@ -46,7 +59,7 @@ h1, h2 {
     background-size: cover;
     overflow: hidden;
     padding-top: 10em;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     color: #fff;
     
@@ -103,10 +116,13 @@ h1, h2 {
     opacity: 0.9;
 }
 
-#home p::selection {
-    color:#002333;
-    background-color: #B4BEC9;
+#home p::selection,
+#home p strong::selection,
+#home h1::selection {
+    color:#fff;
+    background-color: #002333;
 }
+
 
     /* #home .transparent-box {
         background-color: #B4BEC9;
@@ -132,8 +148,8 @@ h1, h2 {
 }
 
 #interests p::selection {
-    color:#002333;
-    background-color: #B4BEC9;
+    color:#fff;
+    background-color: #002333;
 }
 
 #interests .card {
@@ -150,7 +166,7 @@ h1, h2 {
 
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    color: #159A9C;
+    color: #002333;
 }
 
 #interests .card h2 {
@@ -206,30 +222,51 @@ h1, h2 {
 
 /* portfolio */
 
-#portfolio > .container-fluid {
+#portfolio {
 
     background-color: #fff;
     padding: 0;
     margin: 0;
-    width: 100vw;
+    /* width: 100vw; */
     height: fit-content;
     z-index: 100;
+    
 }
 
-#contact > .container-fluid {
+
+#portfolio .card {
+    height: 25em;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    background-color: #002333;
+  }
+
+  #portfolio p::selection, h2::selection {
+    background-color: #159A9C;
+    opacity: 0.5;
+}
+
+#portfolio h2,
+#portfolio p {
+    color: #002333;
+}
+
+
+/* contact */
+
+#contact {
     display: flex;
     background-color: #002333;
-    color: #999;
+    color:  #fff;
     z-index: 100;
     justify-content: center;
     text-shadow: -1px -1px 0px #181818;
+    
+    height: auto;
 }
 
-#contact {
-
-    background-color: #002333;
-    color: #fff;
-}
 
 #contact .container .row {
     align-items: center;
@@ -342,6 +379,9 @@ form textarea {
 #contact footer {
     font-size: medium;
     color: #fff;
+    background-color: #002333;
+    margin-bottom: 2em;
+    
 }
 
 #contact .border-top {
@@ -430,6 +470,14 @@ form ::-moz-focus-inner {
         align-items: center;
     
     }
+
+    #portfolio .card {
+   
+        height: 15em;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
 
     #interests .card {
        
