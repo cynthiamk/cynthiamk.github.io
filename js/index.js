@@ -1,3 +1,5 @@
+import { public_key, template_id, service_id } from "./config.js";
+
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 
@@ -24,15 +26,37 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-function sendEmail() {
-    var link = document.getElementById('send_email');
-    var name = document.getElementById('floatingName').value;
-    var subject = document.getElementById('floatingSubject').value;
-    var message = "Hello my name is " + name + " -- " + document.getElementById('floatingMessage').value;
-    var email = "cynmuy@gmail.com";
-    var href = "mailto:" + email + "?subject=" + subject + "&body=" + message;
-    console.log(href);
-    link.setAttribute("href", href);
-  }
+// sending email using EmailJS
 
+(function(){
+    emailjs.init(public_key); // Replace with your EmailJS user ID
+ })();
 
+ document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+ 
+    // Collect the form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+ 
+    // Define the email parameters
+    const templateParams = {
+       from_name: name,
+       from_email: email,
+       subject: subject,
+       message: message
+    };
+ 
+    // Send the email using EmailJS
+    emailjs.send(service_id, template_id, templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert('Your message has been sent!');
+    }, function(error) {
+       console.log('FAILED...', error);
+       alert('Sorry, there was an error sending your message. Please try again later.');
+    });
+ });
+ 
