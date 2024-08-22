@@ -29,7 +29,7 @@ function backToTop() {
 // sending email using EmailJS
 
 (function(){
-    emailjs.init(PUBLIC_KEY); // Replace with your EmailJS user ID
+    emailjs.init(PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}); // Replace with your EmailJS user ID
  })();
 
  document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -50,7 +50,7 @@ function backToTop() {
     };
  
     // Send the email using EmailJS
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+    emailjs.send(SERVICE_ID: ${{secrets.SERVICE_ID}}), TEMPLATE_ID: ${{secrets.TEMPLATE_ID}}), templateParams)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
        alert('Your message has been sent!');
