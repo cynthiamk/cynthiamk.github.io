@@ -438,7 +438,7 @@ footer {
         height: 15em;
         background-position: top center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
       }
 
     #interests .card {
