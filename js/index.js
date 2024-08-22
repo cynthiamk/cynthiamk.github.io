@@ -26,6 +26,8 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+//send email using mailto
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();  // Prevent the default form submission
 

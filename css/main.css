@@ -8,11 +8,6 @@ body{
     padding: 0;
 }
 
-footer {
-    margin: 0;
-    padding: 0;
-}
-
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
@@ -181,9 +176,9 @@ h1, h2 {
 
 #portfolio .card {
     height: 25em;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: contain;
     text-align: center;
     background-color: #002333;
   }
@@ -198,22 +193,25 @@ h1, h2 {
     color: #002333;
 }
 
+
+
+#portfolio .card h3 a {
+    color: #FFC636;
+  }
+
 /****** contact ******/
 
 #contact {
-  
     flex: 1;
     padding-bottom: 0;
     margin-bottom: 0;
-    min-height: 100vh;
-
     background-color: #002333;
     color: #fff;
     z-index: 100;
     justify-content: center;
     text-shadow: -1px -1px 0px #181818;
     overflow: hidden;
-    min-height: 100vh; /* Ensure it covers at least the full viewport height */
+    min-height: fit-content; /* Ensure it covers at least the full viewport height */
     padding: 2rem; /* Adjust padding if necessary */
 }
 
@@ -387,14 +385,9 @@ form ::-moz-focus-inner {
     border: 0;
 }
 
-
-
 footer {
-    font-size: medium;
-    color: #fff;
-    background-color: #002333;   
-    max-height: 100%;
-   
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 700px){
