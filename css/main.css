@@ -1,42 +1,36 @@
 
 body{
     background-color: #159A9C;
-   
-    
 }
+
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
-    right: .1em;
+    right: 20px; /* Changed to fixed px value */
     display: none;
     font-size: 1.5rem;
     color: #FFC636;
     z-index: 1000;
   }
 
-
 p, a, .card, ul label, input, .btn, button{
     font-family: "Inter", sans-serif;
     font-weight: 300;
     font-size: medium;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
-
 
 h1, h2 {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 400;
 }
 
-
 #navigation {
     background-color: #002333;
     display: flex;
     justify-content: center;
     width: 100%;
-    /* overflow: hidden; */
-    
+    overflow: hidden;
 }
 
 .nav a {
@@ -50,26 +44,19 @@ h1, h2 {
 /******* home section ******/
 
 #home  {
-
     background-color: #B4BEC9;
     background: url(/images/cyborg.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
     padding-top: 10em;
-    /* width: 100vw; */
+    width: 100%;
     height: 100vh;
-    color: #fff;
-    
+    color: #fff;   
 }
 
 #home h1 {
     color: #fff;
     font-family: Matemasie;
-    /* margin-left: 3.5rem; */
-    /* margin-top: 1rem; */
     }
 
 #home p {
@@ -81,37 +68,30 @@ h1, h2 {
     font-size: larger;
 }
 
-
-
 #home .row {
     align-items: center;
-
 }
 
 .home-btn {
     --bs-btn-padding-y: 1em;
     --bs-btn-padding-x: 8rem;
-    /* --bs-btn-font-size: .85rem; */
     background-color: #159A9C;
     border-color: #159A9C;
-     margin-left: 0; 
-}
-
-.home-btn {
+    margin-left: 0; 
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
 }
 
 .home-btn:hover {
-    background-color: #159A9C;
+    background-color: #0d797a; /* darker shade */
     border-color: #159A9C;
     opacity: 0.9;
     color: #fff;
 }
 
 .home-btn:active:focus {
-    background-color: #159A9C;
+    background-color: #0d797a;
     border-color: #159A9C;
     opacity: 0.9;
 }
@@ -123,29 +103,11 @@ h1, h2 {
     background-color: #002333;
 }
 
-
-    /* #home .transparent-box {
-        background-color: #B4BEC9;
-        opacity: 0.2;
-        z-index: 1000;
-
-    } */
-   
-
    /****** interests ******/
 
 #interests {
     background-color: #159A9C;
 } 
-
-#interests > .container{
-
-    
-    height: fit-content;
-    width: fit-content;
-    justify-content: space-around;
-    
-}
 
 #interests p::selection {
     color:#fff;
@@ -156,24 +118,16 @@ h1, h2 {
     background-color: #B4BEC9;
     opacity: 0.8;
     color: #002333;
-    height: 20rem;
-    left: 0;
-    right:0;
-    
+    height: 20rem;  
 }
 
 #interests .card .fa-solid {
-
     font-size: 4rem;
     margin-bottom: 1.5rem;
     color: #002333;
 }
 
-#interests .card h2 {
-    color: #002333;
-    
-}
-
+#interests .card h2,
 #interests .card ul {
     color: #002333;
 }
@@ -181,7 +135,6 @@ h1, h2 {
 .interests-btn {
     --bs-btn-padding-y: 1em;
     --bs-btn-padding-x: 9rem;
-    /* --bs-btn-font-size: .85rem; */
     background-color: #002333;
     border-color: #002333;
     margin-top: 3rem; 
@@ -194,45 +147,27 @@ h1, h2 {
     font-weight: bold;
 }
 
-.interests-btn:hover {
-    background-color: #002333;
-    border-color: #002333;
-    color: #fff;
-    opacity: 0.9;
-}
-
+.interests-btn:hover,
 .interests-btn:active:focus {
-    background-color: #002333;
+    background-color: #02161f; /* darker shade of navy */
     border-color: #002333;
     color: #fff;
 }
 
 .interests-btn:hover {
-   
     color: #B4BEC9;
 }
 
-    /* #home .transparent-box {
-        background-color: #B4BEC9;
-        opacity: 0.2;
-        z-index: 1000;
-
-    } */
-       
-
-/* portfolio */
+/****** portfolio ******/
 
 #portfolio {
-
     background-color: #fff;
     padding: 0;
     margin: 0;
-    /* width: 100vw; */
+    width: 100%;
     height: fit-content;
     z-index: 100;
-    
 }
-
 
 #portfolio .card {
     height: 25em;
@@ -253,28 +188,30 @@ h1, h2 {
     color: #002333;
 }
 
-
-/* contact */
+/****** contact ******/
 
 #contact {
     display: flex;
     background-color: #002333;
-    color:  #fff;
+    color: #fff;
     z-index: 100;
     justify-content: center;
     text-shadow: -1px -1px 0px #181818;
-    
-    height: auto;
+    overflow: hidden;
+    min-height: 100vh; /* Ensure it covers at least the full viewport height */
+    padding: 2rem; /* Adjust padding if necessary */
 }
 
+#contact .container {
+    height: auto; /* Ensure it grows with the content */
+    min-height: 100%; /* Ensure it stretches to the height of the parent */
+}
 
 #contact .container .row {
     align-items: center;
-
 }
 
 #contact form textarea {
-    
     height: 15em;
     background-color: #002333;
     line-height: 1.85em;
@@ -318,12 +255,12 @@ form textarea {
     width: 100%;
 }
 
-    form input[type=text]:focus,
-    form input[type=email]:focus,
-    form select:focus,
-    form textarea:focus {
-        background: #002333;
-        box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #159A9C
+form input[type=text]:focus,
+form input[type=email]:focus,
+form select:focus,
+form textarea:focus {
+    background: #002333;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #159A9C
     }
 
 form textarea {
@@ -332,16 +269,48 @@ form textarea {
 }
 
 #contact .msg-btn {
-     --bs-btn-padding-y: 1em;
+    --bs-btn-padding-y: 1em;
     --bs-btn-padding-x: 5rem; 
-    /* --bs-btn-font-size: .85rem; */
     background-color: #159A9C;
     border-color: #159A9C;
-     margin-left: 0; 
-     text-align: center;
+    margin-left: 0; 
+    text-align: center;
 }
 
-.msg-btn {
+#contact .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Primary Button Styling */
+#contact .btn-primary {
+    background-color: #159A9C; /* Primary color (e.g., blue) */
+    color: #fff;
+    font-weight: bold;
+}
+
+#contact .btn-primary:hover {
+    background-color: #098486; /* Darker shade for hover effect */
+    font-weight: bold;
+}
+
+/* Secondary Button Styling */
+#contact .btn-secondary {
+    background-color: #6c757d; /* Secondary color (e.g., gray) */
+    color: #fff;
+    font-weight: bold;
+}
+
+#contact .btn-secondary:hover {
+    background-color: #5a6268; /* Darker shade for hover effect */
+    font-size: 1rem;
+    font-weight: bold;
+}
+/* .msg-btn {
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
@@ -359,7 +328,7 @@ form textarea {
     background-color: #159A9C;
     border-color: #159A9C;
     opacity: 0.9;
-}
+} */
 
 #contact footer ul {
     color: #fff;
@@ -372,31 +341,23 @@ form textarea {
 
 #contact ul i{
     font-size: 2.5em;
-    padding: 0 .3em;
-    
+    padding: 0 .3em;  
 }
 
 #contact footer {
     font-size: medium;
     color: #fff;
-    background-color: #002333;
-    margin-bottom: 2em;
-    
+    background-color: #002333;   
 }
 
 #contact .border-top {
     border-color: #159A9C;
 }
 
-#contact p::selection, h2::selection {
-    background-color: #159A9C;
-}
-
+#contact p::selection, h2::selection,
 #contact footer span::selection {
     background-color: #159A9C;
 }
-
-
 
 form ::-webkit-input-placeholder {
     color: #B4BEC9 !important;
@@ -418,15 +379,11 @@ form ::-moz-focus-inner {
     border: 0;
 }
 
-
-
-
 @media (max-width: 700px){
   
     .home-btn {
         --bs-btn-padding-y: 1em;
         --bs-btn-padding-x: 2rem;
-        
     }
 
     .home .col-lg-6 {
@@ -436,11 +393,8 @@ form ::-moz-focus-inner {
     .interests-btn  {
         
             --bs-btn-padding-y: 1em;
-            --bs-btn-padding-x: 1em;  
-            
+            --bs-btn-padding-x: 1em;      
     }
-    
-
 }
 
 @media (min-width: 180px) and (max-width: 402px){
@@ -451,8 +405,7 @@ form ::-moz-focus-inner {
     #home p {
         font-size: medium;
         text-decoration: none;
-        color: #fff;
-        
+        color: #fff;  
     }
 
     #home h1 {
@@ -468,11 +421,9 @@ form ::-moz-focus-inner {
     
     #home .row {
         align-items: center;
-    
     }
 
     #portfolio .card {
-   
         height: 15em;
         background-position: top center;
         background-repeat: no-repeat;
@@ -480,7 +431,6 @@ form ::-moz-focus-inner {
       }
 
     #interests .card {
-       
         height: fit-content;
     }
 
