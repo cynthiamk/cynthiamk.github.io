@@ -1,6 +1,16 @@
 
 body{
     background-color: #159A9C;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
 }
 
 #btn-back-to-top {
@@ -330,9 +340,6 @@ form textarea {
     opacity: 0.9;
 } */
 
-#contact footer ul {
-    color: #fff;
-}
 
 #contact > .find-me {
     font-weight: 600;
@@ -344,11 +351,7 @@ form textarea {
     padding: 0 .3em;  
 }
 
-#contact footer {
-    font-size: medium;
-    color: #fff;
-    background-color: #002333;   
-}
+
 
 #contact .border-top {
     border-color: #159A9C;
@@ -377,6 +380,16 @@ form :-ms-input-placeholder {
 
 form ::-moz-focus-inner {
     border: 0;
+}
+
+
+
+footer {
+    font-size: medium;
+    color: #fff;
+    background-color: #002333;   
+    max-height: 100%;
+   
 }
 
 @media (max-width: 700px){
